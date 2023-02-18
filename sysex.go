@@ -114,6 +114,6 @@ func (c *FirmataClient) sendSysEx(cmd SysExCommand, data ...byte) (err error) {
 
 //original author left this private
 func (c *FirmataClient) SysEx(cmd SysExCommand, data ...byte) (err error) { 
-	err = c.sendSysEx(SysExCommand, data)
+	err = c.sendSysEx(cmd, data)
 	return
 }
