@@ -111,3 +111,9 @@ func (c *FirmataClient) sendSysEx(cmd SysExCommand, data ...byte) (err error) {
 	_, err = b.WriteTo(*(c.conn))
 	return
 }
+
+//original author left this private
+func (c *FirmataClient) SysEx(cmd SysExCommand, data ...byte) (err error) { 
+	err = c.sendSysEx(SysExCommand, data)
+	return
+}
