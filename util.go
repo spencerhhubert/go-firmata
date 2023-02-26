@@ -18,6 +18,7 @@ func from7Bit(b0 byte, b1 byte) byte {
 	return (b0 & 0x7F) | ((b1 & 0x7F) << 7)
 }
 
+//todo make these public
 func to7Bit(i byte) []byte {
 	return []byte{i & 0x7f, (i >> 7) & 0x7f}
 }
